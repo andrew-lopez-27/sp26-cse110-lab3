@@ -27,6 +27,8 @@
           <li>Yang</li>
           <li>Aaron</li>
         </ul>
+      </section> <section id="agenda">
+        <h2>Agenda</h2>
         <ol>
           <li>Do Week 2 group assignments on Canvas</li>
           <li>Complete in lecture assignment</li>
@@ -71,8 +73,25 @@
               <input type="date" name="date">
             </p>
             <p>
-              <input type="radio" id="r1" name="Active Button"><label for="r1">Were you active in meeting?</label>
+              <input type="radio" id="r1" name="active_status" value="yes">
+              <label for="r1">Were you active in meeting?</label>
             </p>
+            
+            <p>
+              <input type="checkbox" id="c1" name="read_notes" value="yes">
+              <label for="c1">I have read the previous meeting notes</label>
+            </p>
+
+            <p>
+              <label for="role">Select your primary role:</label><br>
+              <input list="roles" id="role" name="role">
+              <datalist id="roles">
+                <option value="Lead">
+                <option value="Developer">
+                <option value="Designer">
+              </datalist>
+            </p>
+
             <p>
               <label for="attendance_question">Did you attend the previous meeting?</label><br>
               
@@ -92,7 +111,7 @@
 
     <footer>
       <hr>
-      <p></p>
+      <p>&copy; AJL 2026 Pomodoro Timer. All rights reserved.</p>
     </footer>
 
   </body>
