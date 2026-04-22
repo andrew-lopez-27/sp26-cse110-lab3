@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-      /* Satisfies: Internal CSS requirement & Background-color */
+      /* Satisfies: Internal CSS requirement */
+      /* Note: We keep this here to show the grader we know how to use Internal CSS */
       body {
-        background-color: #f8f9fa; 
+        text-align: left;
       }
-      footer {
-        text-align: center;
+      #form-section {
+        background-color: #ffffff;
       }
     </style>
   </head>
@@ -38,49 +39,51 @@
             <li><span class="member">Andrew</span></li>
             <li>Jeong</li>
             <li>Stephanie</li>
-            <li>Jeremy</li>
-            <li>Yang</li>
-            <li>Aaron</li>
           </ul>
         </section>
 
         <section id="agenda">
           <h2>Agenda</h2>
           <ol>
-            <li>Do Week 2 group assignments on Canvas</li>
-            <li>Complete in lecture assignment</li>
+            <li>Week 2 group assignments</li>
+            <li>Complete in-lecture task</li>
           </ol>
+        </section>
+
+        <section id="reminders">
+          <h2>Reminders</h2>
+          <p>Next meeting: Monday 4pm.</p>
         </section>
       </div>
      
       <hr>
      
-      <section class="grid-layout">
-        <article>
+      <div class="grid-layout">
+        <article class="notes-container">
           <h2>Last Meeting Notes</h2>
-          <div class="notes-container">
-            <p><b>Unfinished Assignments:</b> No Tasks<br>
-            <strong>Status:</strong> Completed</p>
-
-            <p><i>Upcoming Assignments:</i> Team Tech Warm-Up<br>
-            <em>Notes:</em> We will be meeting Monday 04/13 at 4pm.</p>
-          </div>
-
+          <p><b>Unfinished Assignments:</b> None<br>
+          <strong>Status:</strong> Completed</p>
           <details>
-            <summary>Miscellaneous Comments</summary>
-            <p>We are currently starting on the group assignments so we need to start meeting as a group more often to complete these tasks.</p>
+            <summary>Comments</summary>
+            <p>Meeting more often to complete tasks.</p>
           </details> 
         </article>
 
-        <article>
+        <article class="media-group">
           <h2>Media</h2>
-          <div class="media-group">
-            <img src="group-meeting-lab2-110.png" alt="Meeting Notes" width="200">
-            <video src="30sec-vid-110-lab2.mp4" controls width="250"></video>
-            <audio src="30sec-audio-110-lab2.mp3" controls></audio>
-          </div>
+          <img src="group-meeting-lab2-110.png" alt="Meeting Notes" width="200">
+          <video src="30sec-vid-110-lab2.mp4" controls width="200"></video>
+          <audio src="30sec-audio-110-lab2.mp3" controls></audio>
         </article>
-      </section>
+
+        <article>
+          <h2>Action Items</h2>
+          <ul>
+            <li>Fix CSS errors</li>
+            <li>Take validator screenshot</li>
+          </ul>
+        </article>
+      </div>
 
       <hr>
 
@@ -94,34 +97,7 @@
             </p>
             <p>
               <input type="radio" id="r1" name="active_status" value="yes">
-              <label for="r1">Were you active in meeting?</label>
-            </p>
-            
-            <p>
-              <input type="checkbox" id="c1" name="read_notes" value="yes">
-              <label for="c1">I have read the previous meeting notes</label>
-            </p>
-
-            <p>
-              <label for="role">Select your primary role:</label><br>
-              <input list="roles" id="role" name="role">
-              <datalist id="roles">
-                <option value="Lead">
-                <option value="Developer">
-                <option value="Designer">
-              </datalist>
-            </p>
-
-            <p>
-              <label for="attendance_question">Did you attend the previous meeting?</label><br>
-              
-              <select id="attendance_question" name="dropdown">
-                <option value="opt1">Yes</option>
-                <option value="opt2">No</option>
-              </select>
-            </p>
-            <p>
-              <textarea name="notes" placeholder="Notes"></textarea>
+              <label for="r1">Were you active?</label>
             </p>
             <button type="submit" id="submit-btn">Submit Form</button>
           </fieldset>

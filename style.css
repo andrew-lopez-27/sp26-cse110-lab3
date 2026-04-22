@@ -32,6 +32,7 @@ h2 {
   /* Color: color-mix() method */
   border-bottom: 2px solid color-mix(in srgb, var(--accent-blue), white 50%);
 }
+
 p {
   /* Color: hsl() or hsla() */
   color: hsl(210, 20%, 20%);
@@ -45,6 +46,10 @@ p {
 #submit-btn {
   /* CSS Variables & Fallbacks: Using variable with a fallback (#007bff) */
   background-color: var(--accent-blue, #007bff);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
 }
 
 header {
@@ -60,6 +65,7 @@ header {
   top: 0;
   background: white;
   z-index: 1000;
+  padding: 20px;
 }
 
 section {
@@ -123,8 +129,8 @@ section {
 .grid-layout {
   /* Grid: Apply grid */
   display: grid; 
-  /* Grid: 3 related attributes */
-  grid-template-columns: 1fr 1fr; 
+  /* Grid: 3 related attributes (UPDATED TO 3 COLUMNS) */
+  grid-template-columns: 1fr 1fr 1fr; 
   gap: 25px; 
   align-content: center; 
 }
@@ -142,10 +148,16 @@ section {
 
 /* Selector: Element Selector */
 /* Text: text-align */
-footer { text-align: center; }
+footer { 
+  text-align: center; 
+  padding: 20px;
+}
 
 /* Selector: Class Selector (.class) */
-.input-field { border: 1px solid #ccc; }
+.input-field { 
+  border: 1px solid #ccc; 
+  padding: 5px;
+}
 
 /* Selector: ID Selector (#id) */
 #content { padding: 10px; }
@@ -201,14 +213,4 @@ section:has(form) {
 }
 
 /* Psuedo-Class: :active */
-#submit-btn:active {
-  top: 2px;
-}
-
-/* Responsiveness: Media Query based on screen width */
-@media (max-width: 768px) {
-  .flex-layout, .grid-layout {
-    flex-direction: column;
-    grid-template-columns: 1fr;
-  }
-}
+#submit-btn
