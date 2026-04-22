@@ -1,0 +1,214 @@
+/* Font: Include and use a 3rd party font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  /* CSS Variables & Fallbacks: Defining variables */
+  --brand-color: #d65db1;
+  --accent-blue: #2c73d2;
+  --fallback-bg: #008e9b;
+}
+
+/* ✅ SELECTOR: Universal Selector (*) */
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  /* COLOR: Hex Code */
+  /* TEXT: color */
+  color: #333333;
+  
+  /* Background: background-color */
+  background-color: var(--fallback-bg);
+}
+
+h2 {
+  /* Color: Wider-gamut color (display-p3) */
+  color: color(display-p3 0.1 0.4 0.8);
+  
+  /* Color: color-mix() method */
+  border-bottom: 2px solid color-mix(in srgb, var(--accent-blue), white 50%);
+}
+p {
+  /* Color: hsl() or hsla() */
+  color: hsl(210, 20%, 20%);
+}
+
+.member {
+  /* Color: rgb() or rgba() */
+  background-color: rgba(10, 100, 254, 0.1);
+}
+
+#submit-btn {
+  /* CSS Variables & Fallbacks: Using variable with a fallback (#007bff) */
+  background-color: var(--accent-blue, #007bff);
+}
+
+header {
+  /* Color: Color name (i.e. 'orange') */
+  border-top: 5px solid orange;
+
+  /* Sizing: height */
+  /* Unit: Absolute Unit 1 (inches) */
+  height: 1.2in;
+  
+  /* Position: Value 1 (sticky) */
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+section {
+  /* Unit: Absolute Unit 2 (mm) */
+  margin-bottom: 10mm;
+  /* Unit: Relative Unit 1 (vh) */
+  padding-bottom: 2vh;
+  
+  /* Sizing: width */
+  /* Unit: Relative Unit 2 (%) */
+  width: 95%;
+  
+  /* Sizing: max-width */
+  max-width: 1100px;
+  /* Sizing: min-width */
+  min-width: 300px;
+  
+  /* Margin: Long (top, bottom, left, right) */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  /* Padding: Long (top, bottom, left, right) */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+  /* Border: border-width, border-style, border-color */
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+}
+
+.shorthand-box {
+  /* Margin: Short & Auto margins */
+  margin: 20px auto; 
+  /* Padding: Short */
+  padding: 25px;
+  /* Border: border-radius */
+  border-radius: 12px;
+}
+
+.member {
+  /* Unit: Absolute Unit 3 (px) */
+  padding: 4px;
+  /* Unit: Relative Unit 3 (rem) */
+  font-size: 0.9rem;
+}
+
+.flex-layout {
+  /* Flexbox: Apply flex */
+  display: flex; 
+  /* Flexbox: 3 related attributes */
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.grid-layout {
+  /* Grid: Apply grid */
+  display: grid; 
+  /* Grid: 3 related attributes */
+  grid-template-columns: 1fr 1fr; 
+  gap: 25px; 
+  align-content: center; 
+}
+
+.media-group img {
+  /* Display: Value 1 (inline-block) */
+  display: inline-block;
+  width: 100%;
+}
+
+.hidden-item {
+  /* Display: Value 2 (none) */
+  display: none;
+}
+
+/* Selector: Element Selector */
+/* Text: text-align */
+footer { text-align: center; }
+
+/* Selector: Class Selector (.class) */
+.input-field { border: 1px solid #ccc; }
+
+/* Selector: ID Selector (#id) */
+#content { padding: 10px; }
+
+/* Selector: Attribute Selector ([attribute=foo]) */
+input[type="text"] { font-style: italic; }
+
+/* Selector: Selector List (element, element) */
+h1, h3 { color: var(--brand-color); }
+
+/* Selector: Combining Two Selectors (element.class) */
+span.member { font-weight: bold; }
+
+/* --- Combinators --- */
+
+/* Selector: Descendant Combinator (space) */
+main section { color: inherit; }      
+
+/* Selector: Child Combinator (>) */
+article > h2 { letter-spacing: 1px; }         
+
+/* Selector: General Sibling Combinator (~) */
+h2 ~ p { margin-bottom: 5px; }        
+
+/* Selector: Adjacent Sibling Combinator (+) */
+h2 + div { padding-top: 10px; }       
+
+/* Selector: New Selectors :has() */
+section:has(form) {
+  background-color: #fffdec;
+}
+
+/* Selector: Nested Selectors */
+.notes-container {
+  background: #fafafa;
+  & p {
+    color: #666;
+    /* Text: text-decoration */
+    text-decoration: none; 
+  }
+}
+
+#submit-btn {
+  /* Position: Value 2 (relative) */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Selector: Pseudo-class Selector (e.g. p:hover) */
+/* Pseudo-Class: :hover */
+#submit-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Psuedo-Class: :active */
+#submit-btn:active {
+  top: 2px;
+}
+
+/* Responsiveness: Media Query based on screen width */
+@media (max-width: 768px) {
+  .flex-layout, .grid-layout {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}
