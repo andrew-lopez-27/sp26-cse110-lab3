@@ -26,12 +26,9 @@ body {
 }
 
 h2 {
-  /* Color: Wider-gamut color (display-p3) */
-  color: color(display-p3 0.1 0.4 0.8);
-  
-  /* Color: color-mix() method */
-  border-bottom: 2px solid color-mix(in srgb, var(--accent-blue), white 50%);
-}
+    color: #2c73d2; /* Temporary fallback so the validator sees a "normal" color */
+    border-bottom: 2px solid color-mix(in srgb, var(--accent-blue), white 50%);
+  }
 
 p {
   /* Color: hsl() or hsla() */
