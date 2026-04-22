@@ -211,6 +211,3 @@ section:has(form) {
 #submit-btn:hover {
   filter: brightness(1.1);
 }
-
-/* Psuedo-Class: :active */
-#submit-btn
