@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Meeting minutes for the Pomodoro Timer project">
+    <title>Pomodoro Timer Brainstorm</title>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <header>
+        <h1>Pomodoro Timer Brainstorm</h1>
+        <h2>Topic: Brainstorming</h2>
+        <h3>Date: April 14, 2026</h3>
+        <nav>
+            <a href="#content">Go to content</a>
+        </nav>
+    </header>
+    <main id="content">
+      <section id="attendance">
+        <h2>Attendance</h2>
+        <ul>
+          <li><strong>Aidan and Shazi (Team Leads)</strong></li>
+          <li><span>Andrew</span></li>
+          <li>Jeong</li>
+          <li>Stephanie</li>
+          <li>Jeremy</li>
+          <li>Yang</li>
+          <li>Aaron</li>
+        </ul>
+      </section> <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Do Week 2 group assignments on Canvas</li>
+          <li>Complete in lecture assignment</li>
+        </ol>
+      </section>
+     
+      <hr>
+     
+      <section>
+        <h2>Last Meeting Notes</h2>
+        <div>
+          <p><b>Unfinished Assignments:</b> No Tasks<br>
+          <strong>Status:</strong> Completed</p>
+
+          <p><i>Upcoming Assignments:</i> Team Tech Warm-Up<br>
+          <em>Notes:</em> We will be meeting Monday 04/13 at 4pm.</p>
+        </div>
+
+        <details>
+          <summary>Miscallaneous Comments</summary>
+          <p>We are currently starting on the group assignments so we need to start meeting as a group more often to complete these tasks.</p>
+        </details> 
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Media</h2>
+        <img src="group-meeting-lab2-110.png" alt="Meeting Notes">
+        <br> <video src="30sec-vid-110-lab2.mp4" controls width="300"></video>
+        <br> <audio src="30sec-audio-110-lab2.mp3" controls></audio>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Sign-In Form</h2>
+        <form action="#">
+          <fieldset>
+            <p>
+              <input type="text" name="name" placeholder="Name">
+              <input type="date" name="date">
+            </p>
+            <p>
+              <input type="radio" id="r1" name="active_status" value="yes">
+              <label for="r1">Were you active in meeting?</label>
+            </p>
+            
+            <p>
+              <input type="checkbox" id="c1" name="read_notes" value="yes">
+              <label for="c1">I have read the previous meeting notes</label>
+            </p>
+
+            <p>
+              <label for="role">Select your primary role:</label><br>
+              <input list="roles" id="role" name="role">
+              <datalist id="roles">
+                <option value="Lead">
+                <option value="Developer">
+                <option value="Designer">
+              </datalist>
+            </p>
+
+            <p>
+              <label for="attendance_question">Did you attend the previous meeting?</label><br>
+              
+              <select id="attendance_question" name="dropdown">
+                <option value="opt1">Yes</option>
+                <option value="opt2">No</option>
+              </select>
+            </p>
+            <p>
+              <textarea name="notes" placeholder="Notes"></textarea>
+            </p>
+            <button type="submit">Submit Form</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <hr>
+      <p>&copy; AJL 2026 Pomodoro Timer. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
