@@ -187,15 +187,15 @@ section:has(form) {
   background-color: #fffdec;
 }
 
-/* Selector: Nested Selectors */
+/*
 .notes-container {
   background: #fafafa;
   & p {
     color: #666;
-    /* Text: text-decoration */
     text-decoration: none; 
   }
 }
+*/
 
 #submit-btn {
   /* Position: Value 2 (relative) */
