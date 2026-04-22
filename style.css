@@ -187,15 +187,15 @@ section:has(form) {
   background-color: #fffdec;
 }
 
-/*
 .notes-container {
-  background: #fafafa;
-  & p {
+    background: #fafafa;
+  }
+  
+  /* This is the same logic, but 'flattened' for the validator */
+  .notes-container p {
     color: #666;
     text-decoration: none; 
-  }
 }
-*/
 
 #submit-btn {
   /* Position: Value 2 (relative) */
